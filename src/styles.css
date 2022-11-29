@@ -20,24 +20,36 @@ h5{
     font-size: 18px;
 }
 
-
+.body-wrap{
+    
+    margin-top: 60px;
+    margin: auto;
+    width: 750px;
+    height: auto;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+}
 .body{
     margin-top: 60px;
     display: block;
-    width: 90%;
-    max-width: 700px;
-    min-width: fit-content;
+    width: 700px;
     border: 3px solid rgba(95, 95, 95, 0.3);
     border-radius: 20px;
     box-shadow: 0px 0px 37px 8px rgba(130, 130, 130, 0.4);
     height: auto;
     color: white;
-    background-image: url("/img/tormenta.gif");
+    background-image: url("https://media1.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif?cid=790b76111c2c1406d4da4ca6b79b25eb9f674a0b9904cd6c&rid=giphy.gif&ct=g");
     background-position: center;
     background-size: cover;
     font-family: 'Nunito', sans-serif;
 }
 
+.code{
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    width: 90%;
+}
 .city{
     text-align: center;
     height: auto;
@@ -80,7 +92,7 @@ min-width: fit-content;
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
@@ -117,6 +129,7 @@ a {
     float: right;
     padding: 10px;
 }
+
 form{
     display: grid;
     text-align: left;

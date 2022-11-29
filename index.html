@@ -32,122 +32,125 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container body py-3">
-      <div class="header row h-40 my-2 justify-content-between">
-        <div class="col-4 city bd ml-4">
-          <div class="col py-3">
-            <h2 id="city">Córdoba</h2>
-            <h3 id="country"><strong>ARGENTINA</strong></h3>
-            <h5 id="description">Clear</h5>
-          </div>
-          <div class="col mt-5">
-            <div>
-              <h3 id="fullDate">24/10/22</h3>
+    <div class="body-wrap">
+      <div class="container body py-3">
+        <div class="header row h-40 my-2 justify-content-between">
+          <div class="col-4 city bd ml-4">
+            <div class="col py-3">
+              <h2 id="city">Córdoba</h2>
+              <h3 id="country"><strong>ARGENTINA</strong></h3>
+              <h5 id="description">Clear</h5>
             </div>
-            <h2>
-              <span class="temperature" id="minT">5</span>º /
-              <span class="max temperature" id="maxT">14</span>º
-            </h2>
-          </div>
-        </div>
-        <div class="col-6 today bd mr-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <h2 id="currentHour">16:17HS</h2>
+            <div class="col mt-5">
+              <div>
+                <h3 id="fullDate">24/10/22</h3>
+              </div>
+              <h2>
+                <span class="temperature" id="minT">5</span>º /
+                <span class="max temperature" id="maxT">14</span>º
+              </h2>
             </div>
-            <div class="d-flex justify-content-between align-items-start">
-              <h1 class="temperature" id="currentTemp">8</h1>
-              <div class="units">
-                <a href="#" class="celsius">ºC</a>
-                <span>/</span>
-                <a href="#" class="farenheit">ºF</a>
+          </div>
+          <div class="col-6 today bd mr-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h2 id="currentHour">16:17HS</h2>
+              </div>
+              <div class="d-flex justify-content-between align-items-start">
+                <h1 class="temperature" id="currentTemp">8</h1>
+                <div class="units">
+                  <a href="#" class="celsius">ºC</a>
+                  <span>/</span>
+                  <a href="#" class="farenheit">ºF</a>
+                </div>
               </div>
             </div>
-          </div>
-          <i class="fa-solid fa-cloud-bolt d-flex justify-content-center"></i>
+            <i class="fa-solid fa-cloud-bolt d-flex justify-content-center"></i>
 
-          <h5 class="d-flex justify-content-end mt-5"><span id="humidity">90</span>% HUMIDITY</h5>
+            <h5 class="d-flex justify-content-end mt-5">
+              <span id="humidity">90</span>% HUMIDITY
+            </h5>
+          </div>
         </div>
-      </div>
-      <div class="next-days row d-flex justify-content-between my-2 mx-2 py-3">
-        <div class="item bd col-2">
-          <h4 id="day2">31/10</h4>
-          <h3>
-            <span class="temperature">6</span>º /
-            <span class="max temperature">20</span>º
-          </h3>
-          <i class="fa-solid fa-cloud d-flex justify-content-center"></i>
+        <div
+          class="next-days row d-flex justify-content-between my-2 mx-2 py-3"
+        >
+          <div class="item bd col-2">
+            <h4 id="day2">31/10</h4>
+            <h3>
+              <span class="temperature">6</span>º /
+              <span class="max temperature">20</span>º
+            </h3>
+            <i class="fa-solid fa-cloud d-flex justify-content-center"></i>
+          </div>
+          <div class="item bd col-2">
+            <h4 id="day3">01/11</h4>
+            <h3>
+              <span class="temperature">-4</span>º /
+              <span class="max temperature">8</span>º
+            </h3>
+            <i
+              class="fa-solid fa-cloud-showers-heavy d-flex justify-content-center"
+            ></i>
+          </div>
+          <div class="item bd col-2">
+            <h4 id="day4">02/11</h4>
+            <h3>
+              <span class="temperature">8</span>º /
+              <span class="max temperature">24</span>º
+            </h3>
+            <i
+              class="fa-solid fa-cloud-sun-rain d-flex justify-content-center"
+            ></i>
+          </div>
+          <div class="item bd col-2">
+            <h4 id="day5">03/11</h4>
+            <h3>
+              <span class="temperature">-11</span>º /
+              <span class="max temperature">35</span>º
+            </h3>
+            <i class="fa-solid fa-poo-storm d-flex justify-content-center"></i>
+          </div>
+          <div class="item bd col-2">
+            <h4 id="day6">04/11</h4>
+            <h3>
+              <span class="temperature">14</span>º /
+              <span class="max temperature">24</span>º
+            </h3>
+            <i class="fa-solid fa-sun d-flex justify-content-center"></i>
+          </div>
         </div>
-        <div class="item bd col-2">
-          <h4 id="day3">01/11</h4>
-          <h3>
-            <span class="temperature">-4</span>º /
-            <span class="max temperature">8</span>º
-          </h3>
-          <i
-            class="fa-solid fa-cloud-showers-heavy d-flex justify-content-center"
-          ></i>
-        </div>
-        <div class="item bd col-2">
-          <h4 id="day4">02/11</h4>
-          <h3>
-            <span class="temperature">8</span>º /
-            <span class="max temperature">24</span>º
-          </h3>
-          <i
-            class="fa-solid fa-cloud-sun-rain d-flex justify-content-center"
-          ></i>
-        </div>
-        <div class="item bd col-2">
-          <h4 id="day5">03/11</h4>
-          <h3>
-            <span class="temperature">-11</span>º /
-            <span class="max temperature">35</span>º
-          </h3>
-          <i class="fa-solid fa-poo-storm d-flex justify-content-center"></i>
-        </div>
-        <div class="item bd col-2">
-          <h4 id="day6">04/11</h4>
-          <h3>
-            <span class="temperature">14</span>º /
-            <span class="max temperature">24</span>º
-          </h3>
-          <i class="fa-solid fa-sun d-flex justify-content-center"></i>
-        </div>
-      </div>
-      <div class="row search-city h-25 my-2 mx-2">
-        <div class="col py-2">
-          <form class="bd mt-3" id="searchCity">
-            <label for="city">Insert city</label>
-            <row>
-              <input type="text" name="city" id="city-input" />
-              <button class="search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </br>
-              <button class="find col mt-1 p-1" id="find">Current</button>
-            </row>
-          </form>
-          
-          <div class="footer mt-5">
-            <footer class="py-2">
-              Coded by
-              <a
-                href="https://www.shecodes.io/graduates/57970-pilar-maria-carranza-astrada"
-                target="_blank"
-              >
-                Pilar Carranza</a
-              >
-            </footer>
+        <div class="row search-city h-25 my-2 mx-2">
+          <div class="col py-2">
+            <form class="bd mt-3" id="searchCity">
+              <label for="city">Insert city</label>
+              <row>
+                <input type="text" name="city" id="city-input" />
+                <button class="search" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <br />
+                <button class="find col mt-1 p-1" id="find">Current</button>
+              </row>
+            </form>
           </div>
         </div>
       </div>
-      <div class="code">Click <a 
-        href="https://github.com/pilicarranzaa/pilar-shecodes-project"
-        target="_blank"
-        ><u>here</u></a> to see Open-source code</div>
+      <div class="code">
+        <a
+          href="https://github.com/pilicarranzaa/pilar-shecodes-project"
+          target="_blank"
+          >Open-source code</a
+        >
+        by
+        <a
+          href="https://www.shecodes.io/graduates/57970-pilar-maria-carranza-astrada"
+          target="_blank"
+        >
+          Pilar Carranza</a
+        >
+      </div>
     </div>
-    
     <script src="src/index.js"></script>
   </body>
 </html>
