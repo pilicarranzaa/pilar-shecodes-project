@@ -65,6 +65,8 @@ let day6 = getNextDay(day5, "#day6");
 
 //-----------------------------------------
 
+addEventListener("load", searchCurrentCity);
+
 let findCity = document.querySelector("#searchCity");
 findCity.addEventListener("submit", searchCity);
 

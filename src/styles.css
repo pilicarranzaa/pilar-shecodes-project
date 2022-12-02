@@ -25,6 +25,7 @@ ul {
     font-size: 18px;
 }
 
+
 .body-wrap{
     
     margin-top: 60px;
@@ -133,9 +134,7 @@ a {
     font-weight: bold;
     Text-Decoration: None;
 }
-.find:hover{
-    pointer-events: none;
-}
+
 .max{
     font-weight: bold;
 }
