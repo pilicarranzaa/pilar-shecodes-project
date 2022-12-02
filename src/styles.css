@@ -20,6 +20,11 @@ h5{
     font-size: 18px;
 }
 
+ul {
+    list-style: none;
+    font-size: 18px;
+}
+
 .body-wrap{
     
     margin-top: 60px;
@@ -50,11 +55,26 @@ h5{
     align-items: center;
     width: 90%;
 }
+.header {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
 .city{
+    flex: 1;
+    max-width: 40%;
     text-align: center;
     height: auto;
-    min-width: fit-content;
+    }
+
+.today {
+    flex: 1;
+    max-width: 60%;
+    margin-left: 20px;
+    height: auto;
 }
+
 
 
 .date h3 {
@@ -65,10 +85,7 @@ h5{
     text-align: center;
 }
 
-.today{
-    height: auto;
-    min-width: fit-content;
-}
+
 .today i {
     font-size: 100px;
 }
@@ -128,6 +145,30 @@ a {
     font-weight: bold;
     float: right;
     padding: 10px;
+}
+
+.farenheit,.celsius{
+    color: white;
+}
+
+.mainImg {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+.today img{
+    width: 125px;
+}
+.next-days img{
+    width: 75px;
+}
+
+.info{
+    margin: auto;
+    text-align: end;
+    padding: 10px;
+    
 }
 
 form{

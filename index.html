@@ -34,8 +34,8 @@
   <body>
     <div class="body-wrap">
       <div class="container body py-3">
-        <div class="header row h-40 my-2 justify-content-between">
-          <div class="col-4 city bd ml-4">
+        <div class="header">
+          <div class="city bd">
             <div class="col py-3">
               <h2 id="city">Córdoba</h2>
               <h3 id="country"><strong>ARGENTINA</strong></h3>
@@ -51,7 +51,7 @@
               </h2>
             </div>
           </div>
-          <div class="col-6 today bd mr-4">
+          <div class="today bd">
             <div class="d-flex justify-content-between align-items-center">
               <div>
                 <h2 id="currentHour">16:17HS</h2>
@@ -65,11 +65,19 @@
                 </div>
               </div>
             </div>
-            <i class="fa-solid fa-cloud-bolt d-flex justify-content-center"></i>
-
-            <h5 class="d-flex justify-content-end mt-5">
-              <span id="humidity">90</span>% HUMIDITY
-            </h5>
+            <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
+            <div class="info">
+              <ul>
+                <li>Humidity: <span id="humidity">90</span>%</li>
+                <li>Wind: <span id="wind">90</span> km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
@@ -81,7 +89,13 @@
               <span class="temperature">6</span>º /
               <span class="max temperature">20</span>º
             </h3>
-            <i class="fa-solid fa-cloud d-flex justify-content-center"></i>
+            <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
           </div>
           <div class="item bd col-2">
             <h4 id="day3">01/11</h4>
@@ -89,9 +103,13 @@
               <span class="temperature">-4</span>º /
               <span class="max temperature">8</span>º
             </h3>
-            <i
-              class="fa-solid fa-cloud-showers-heavy d-flex justify-content-center"
-            ></i>
+            <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/50d@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
           </div>
           <div class="item bd col-2">
             <h4 id="day4">02/11</h4>
@@ -99,9 +117,13 @@
               <span class="temperature">8</span>º /
               <span class="max temperature">24</span>º
             </h3>
-            <i
-              class="fa-solid fa-cloud-sun-rain d-flex justify-content-center"
-            ></i>
+             <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/04d@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
           </div>
           <div class="item bd col-2">
             <h4 id="day5">03/11</h4>
@@ -109,7 +131,13 @@
               <span class="temperature">-11</span>º /
               <span class="max temperature">35</span>º
             </h3>
-            <i class="fa-solid fa-poo-storm d-flex justify-content-center"></i>
+            <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
           </div>
           <div class="item bd col-2">
             <h4 id="day6">04/11</h4>
@@ -117,7 +145,13 @@
               <span class="temperature">14</span>º /
               <span class="max temperature">24</span>º
             </h3>
-            <i class="fa-solid fa-sun d-flex justify-content-center"></i>
+             <div class="mainImg">
+              <img
+                src="https://openweathermap.org/img/wn/02n@2x.png"
+                alt="Clear"
+                class="icon"
+              />
+            </div>
           </div>
         </div>
         <div class="row search-city h-25 my-2 mx-2">

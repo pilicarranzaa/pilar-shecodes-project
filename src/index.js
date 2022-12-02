@@ -93,7 +93,7 @@ function showCity(response) {
   let count = response.data.sys.country;
   let description = response.data.weather[0].description;
   let humid = response.data.main.humidity;
-
+  let wind = response.data.wind.speed;
 
   let city = document.querySelector("#city");
   city.innerHTML = cityName.charAt(0).toUpperCase() + cityName.slice(1).toLowerCase();
@@ -115,6 +115,15 @@ function showCity(response) {
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = humid;
+
+  let windy = document.querySelector("#wind");
+  windy.innerHTML = wind;
+
+  let iconElement = document.querySelector(".icon");
+  iconElement.setAttribute("src", 
+  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", description); 
+
 }
 
 //-----------------------------------
@@ -144,6 +153,7 @@ function showTemp(response) {
   let count = response.data.sys.country;
   let description = response.data.weather[0].description;
   let humid = response.data.main.humidity;
+  let wind = response.data.wind.speed;
 
 
   let city = document.querySelector("#city");
@@ -166,6 +176,14 @@ function showTemp(response) {
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = humid;
+
+  let windy = document.querySelector("#wind");
+  windy.innerHTML = wind;
+
+   let iconElement = document.querySelector(".icon");
+  iconElement.setAttribute("src", 
+  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", description); 
 }
 
 
