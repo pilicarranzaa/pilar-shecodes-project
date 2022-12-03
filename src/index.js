@@ -86,6 +86,30 @@ const getAPI = function (city) {
   return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 }
 
+function changeBg(mainDescription){
+  if(mainDescription === "Thunderstorm" || mainDescription === "Drizzle" || mainDescription === "Rain"){
+    let bg = document.querySelector(".body");
+    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
+    bg.classList.add(`rain`);
+  };
+  if(mainDescription === "Clear"){
+    let bg = document.querySelector(".body");
+    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
+    bg.classList.add(`clear`);
+  };
+  
+  if(mainDescription === "Snow"){
+    let bg = document.querySelector(".body");
+    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
+    bg.classList.add(`snow`);
+  }
+  if(mainDescription === "Clouds"){
+    let bg = document.querySelector(".body");
+    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
+    bg.classList.add(`cloud`);
+  }
+}
+
 
 function showCity(response) {
   let cityName = response.data.name;
@@ -96,6 +120,10 @@ function showCity(response) {
   let description = response.data.weather[0].description;
   let humid = response.data.main.humidity;
   let wind = response.data.wind.speed;
+  let mainDescription = response.data.weather[0].main;
+
+  changeBg(mainDescription);
+
 
   let city = document.querySelector("#city");
   city.innerHTML = cityName.charAt(0).toUpperCase() + cityName.slice(1).toLowerCase();
@@ -156,6 +184,9 @@ function showTemp(response) {
   let description = response.data.weather[0].description;
   let humid = response.data.main.humidity;
   let wind = response.data.wind.speed;
+  let mainDescription = response.data.weather[0].main;
+
+  changeBg(mainDescription);
 
 
   let city = document.querySelector("#city");
