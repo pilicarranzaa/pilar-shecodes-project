@@ -42,26 +42,55 @@ ul {
     background-size: cover;
 }
 
-.cloud {
-    background-image: url("https://media1.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif?cid=790b76111c2c1406d4da4ca6b79b25eb9f674a0b9904cd6c&rid=giphy.gif&ct=g");
+.dCloud {
+    background-image: url(/img/day-clouds.gif);
+    background-position: center;
+    background-size: cover;
+}
+.nCloud {
+    background-image: url(/img/night-clouds.gif);
     background-position: center;
     background-size: cover;
 }
 
-.clear {
-    background-image: url("https://media.giphy.com/media/0Styincf6K2tvfjb5Q/giphy.gif");
+.dClear {
+    background-image: url(/img/day-clear.gif);
     background-position: center;
     background-size: cover;
 }
 
-.rain {
-    background-image: url("https://media.tenor.com/ZOFYQsOtMwMAAAAC/rain-raindrops.gif");
+.nClear {
+    background-image: url(/img/night-clear.gif);
     background-position: center;
     background-size: cover;
 }
 
-.snow {
-    background-image: url("https://media.giphy.com/media/RWJPtq90qOA4E/giphy.gif");
+.dRain {
+    background-image: url(/img/day-storm.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.nRain {
+    background-image: url(/img/night-rain.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.dSnow {
+    background-image: url(/img/day-snow.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.nSnow {
+    background-image: url(/img/night-snow.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.foggy {
+    background-image: url(/img/foggy.gif);
     background-position: center;
     background-size: cover;
 }

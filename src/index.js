@@ -86,28 +86,60 @@ const getAPI = function (city) {
   return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 }
 
-function changeBg(mainDescription){
-  if(mainDescription === "Thunderstorm" || mainDescription === "Drizzle" || mainDescription === "Rain"){
+function changeBg(mainDescription, pod){
+  if((mainDescription == "Thunderstorm" || mainDescription == "Drizzle" || mainDescription == "Rain") && pod == "d"){
     let bg = document.querySelector(".body");
-    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
-    bg.classList.add(`rain`);
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `dRain`);
   };
-  if(mainDescription === "Clear"){
+
+  if(mainDescription == "Clear" && pod == "d"){
     let bg = document.querySelector(".body");
-    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
-    bg.classList.add(`clear`);
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `dClear`);
   };
   
-  if(mainDescription === "Snow"){
+  if(mainDescription == "Snow" && pod == "d"){
     let bg = document.querySelector(".body");
-    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
-    bg.classList.add(`snow`);
-  }
-  if(mainDescription === "Clouds"){
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `dSnow`);
+  };
+
+  if(mainDescription == "Clouds" && pod == "d"){
     let bg = document.querySelector(".body");
-    bg.classList.remove(`defaultBg`, `cloud`, `clear`, `rain`, `snow`);
-    bg.classList.add(`cloud`);
-  }
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `dCloud`);
+  };
+
+  if((mainDescription == "Fog" || mainDescription == "Mist" || mainDescription == "Smoke" || mainDescription == "Haze" || mainDescription == "Dust" || mainDescription == "Sand" || mainDescription == "Ash" || mainDescription == "Squall" || mainDescription == "Tornado") && (pod == "d" || pod == "n")){
+    let bg = document.querySelector(".body");
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `foggy`);
+  };
+
+   if((mainDescription == "Thunderstorm" || mainDescription == "Drizzle" || mainDescription == "Rain") && pod == "n"){
+    let bg = document.querySelector(".body");
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `nRain`);
+  };
+
+  if(mainDescription == "Clear" && pod == "n"){
+    let bg = document.querySelector(".body");
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `nClear`);
+  };
+  
+  if(mainDescription == "Snow" && pod == "n"){
+    let bg = document.querySelector(".body");
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `nSnow`);
+  };
+
+  if(mainDescription == "Clouds" && pod == "n"){
+    let bg = document.querySelector(".body");
+    bg.removeAttribute("class");
+    bg.classList.add(`container`, `body`, `py-3`, `nCloud`);
+  };
 }
 
 
@@ -121,8 +153,10 @@ function showCity(response) {
   let humid = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let mainDescription = response.data.weather[0].main;
+  let icon = response.data.weather[0].icon;
+  let pod = icon[icon.length - 1];
 
-  changeBg(mainDescription);
+  changeBg(mainDescription, pod);
 
 
   let city = document.querySelector("#city");
@@ -185,8 +219,10 @@ function showTemp(response) {
   let humid = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let mainDescription = response.data.weather[0].main;
+  let icon = response.data.weather[0].icon;
+  let pod = icon[icon.length - 1];
 
-  changeBg(mainDescription);
+  changeBg(mainDescription, pod);
 
 
   let city = document.querySelector("#city");
