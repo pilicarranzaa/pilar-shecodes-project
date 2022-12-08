@@ -99,11 +99,11 @@ ul {
     margin-top: 60px;
     display: block;
     width: 700px;
-    border: 3px solid rgba(95, 95, 95, 0.3);
+    border: 0px solid rgba(95, 95, 95, 0.3);
     border-radius: 20px;
-    box-shadow: 0px 0px 37px 8px rgba(130, 130, 130, 0.4);
+    box-shadow: 0px 0px 37px 8px rgba(13, 13, 13, 0.4);
     height: auto;
-    color: white;
+    color: rgb(48, 48, 48);
     font-family: 'Nunito', sans-serif;
 }
 
@@ -119,6 +119,26 @@ ul {
     padding: 0px;
     justify-content: space-between;
 }
+
+.next-days {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.item {
+    flex: 1;
+    max-width: 18%;
+    min-width: 18%;
+    text-align: center;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    
+}
+
+
 .city{
     flex: 1;
     max-width: 40%;
@@ -155,11 +175,7 @@ ul {
     font-size: 40px;
 }
 
-.item  {
-padding: 5px;
-min-width: fit-content;
-        
-}
+
 .footer{
     text-align:center;
     font-size: large;
@@ -172,22 +188,23 @@ a {
 }
 
 .bd {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(209, 209, 209, 0.427);
     border-radius: 10px;
-    box-shadow: 0px 0px 45px 2px rgba(173, 173, 171, 0.5);
+    box-shadow: 0px 0px 78px 8px rgba(76, 76, 75, 0.5);
+    
 }
 
 .search {
     padding: 0;
     border: none;
     background: none;
-    color: white;
+    color: rgb(48, 48, 48);
 }
 .find{
     padding: 0;
     border: none;
     background: none;
-    color: white;
+    color: rgb(48, 48, 48);
     font-weight: bold;
     Text-Decoration: None;
 }
@@ -204,7 +221,7 @@ a {
 }
 
 .farenheit,.celsius{
-    color: white;
+    color: rgb(48, 48, 48);
 }
 
 .mainImg {
@@ -223,7 +240,7 @@ a {
 .info{
     margin: auto;
     text-align: end;
-    padding: 10px;
+    padding: 0 20px;
     
 }
 

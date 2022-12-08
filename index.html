@@ -52,7 +52,9 @@
             </div>
           </div>
           <div class="today bd">
-            <div class="d-flex justify-content-between align-items-center">
+            <div
+              class="d-flex justify-content-between align-items-center px-3 py-1"
+            >
               <div>
                 <h2 id="currentHour">16:17HS</h2>
               </div>
@@ -80,76 +82,79 @@
             </div>
           </div>
         </div>
-        <div
-          class="next-days row d-flex justify-content-between my-2 mx-2 py-3"
-        >
-          <div class="item bd col-2">
-            <h4 id="day2">31/10</h4>
+        <div class="next-days">
+          <div class="item bd">
+            <h4 id="day1">31/10</h4>
             <h3>
-              <span class="temperature">6</span>º /
-              <span class="max temperature">20</span>º
+              <span class="temperature" id="min1">6</span>º /
+              <span class="max temperature" id="max1">20</span>º
             </h3>
             <div class="mainImg">
               <img
                 src="https://openweathermap.org/img/wn/01d@2x.png"
                 alt="Clear"
                 class="icon"
+                id="icon1"
               />
             </div>
           </div>
-          <div class="item bd col-2">
-            <h4 id="day3">01/11</h4>
+          <div class="item bd">
+            <h4 id="day2">01/11</h4>
             <h3>
-              <span class="temperature">-4</span>º /
-              <span class="max temperature">8</span>º
+              <span class="temperature" id="min2">-4</span>º /
+              <span class="max temperature" id="max2">8</span>º
             </h3>
             <div class="mainImg">
               <img
                 src="https://openweathermap.org/img/wn/50d@2x.png"
                 alt="Clear"
                 class="icon"
+                id="icon2"
               />
             </div>
           </div>
-          <div class="item bd col-2">
-            <h4 id="day4">02/11</h4>
+          <div class="item bd">
+            <h4 id="day3">02/11</h4>
             <h3>
-              <span class="temperature">8</span>º /
-              <span class="max temperature">24</span>º
+              <span class="temperature" id="min3">8</span>º /
+              <span class="max temperature" id="max3">24</span>º
             </h3>
             <div class="mainImg">
               <img
                 src="https://openweathermap.org/img/wn/04d@2x.png"
                 alt="Clear"
                 class="icon"
+                id="icon3"
               />
             </div>
           </div>
-          <div class="item bd col-2">
-            <h4 id="day5">03/11</h4>
+          <div class="item bd">
+            <h4 id="day4">03/11</h4>
             <h3>
-              <span class="temperature">-11</span>º /
-              <span class="max temperature">35</span>º
+              <span class="temperature" id="min4">-11</span>º /
+              <span class="max temperature" id="max4">35</span>º
             </h3>
             <div class="mainImg">
               <img
                 src="https://openweathermap.org/img/wn/10d@2x.png"
                 alt="Clear"
                 class="icon"
+                id="icon4"
               />
             </div>
           </div>
-          <div class="item bd col-2">
-            <h4 id="day6">04/11</h4>
+          <div class="item bd">
+            <h4 id="day5">04/11</h4>
             <h3>
-              <span class="temperature">14</span>º /
-              <span class="max temperature">24</span>º
+              <span class="temperature" id="min5">14</span>º /
+              <span class="max temperature" id="max5">24</span>º
             </h3>
             <div class="mainImg">
               <img
                 src="https://openweathermap.org/img/wn/02n@2x.png"
                 alt="Clear"
                 class="icon"
+                id="icon5"
               />
             </div>
           </div>
@@ -159,7 +164,13 @@
             <form class="bd mt-3" id="searchCity">
               <label for="city">Insert city</label>
               <row>
-                <input type="text" name="city" id="city-input" />
+                <input
+                  type="text"
+                  name="city"
+                  id="city-input"
+                  placeholder="Insert city"
+                  autocomplete="off"
+                />
                 <button class="search" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
